@@ -1,5 +1,6 @@
 import { footerLinks } from '@/constants';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 type ColumnProps = {
@@ -10,9 +11,11 @@ type ColumnProps = {
 const FooterColumn = ({ title, links }: ColumnProps ) => {
     return (
         <div className="footer_column">
-            <h4 className="font-semibold">Title</h4>
+            <h4 className="font-semibold">{title}</h4>
             <ul className="flex flex-col gap-2 font-normal">
-                Links
+                { links.map((link) => {
+                    return <Link href="/" key={link}>{link}</Link>
+                }) }
             </ul>
         </div>
     )
