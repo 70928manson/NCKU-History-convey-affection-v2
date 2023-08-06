@@ -4,8 +4,8 @@ import Link from 'next/link';
 import React from 'react';
 
 type ColumnProps = {
-    title: string,
-    links: Array<string>
+    title: string;
+    links: Array<string>;
 }
 
 const FooterColumn = ({ title, links }: ColumnProps ) => {
